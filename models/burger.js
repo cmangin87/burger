@@ -6,8 +6,8 @@ var burger = {
       cb(res);
     });
   },
-  insertOne: function(cols, vals, cb) {
-    orm.insertOne("burgers", cols, vals, function(res) {
+  selectOne: function(cols, vals, cb) {
+    orm.selectOne("burgers", cols, vals, function(res) {
       cb(res);
     });
   },
@@ -15,7 +15,7 @@ var burger = {
     orm.updateOne("burgers", objColVals, condition, function(res) {
       cb(res);
     });
-  }
+  },
 };
 
 module.exports = burger;
