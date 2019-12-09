@@ -10,9 +10,9 @@ app.use(express.static("public"));
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
-var routes = require("../burger/controllers/burgers_controller");
+var routes = require("./controllers/burgers_controller")
 
 app.use("/", routes);
 app.listen(port, function() {
-  console.log("App listening on http://localjaws:" + port);
+  console.log("App listening on http://localhost:" + port);
 });
